@@ -179,13 +179,13 @@ function App() {
                     onLike={handleLike}
                     onDislike={handleDislike}
                     isPromotingNext={isPromotingNext}
-                    setCurrentIndex={setCurrentIndex}
-                    setIsPromotingNext={setIsPromotingNext}
+                    // setCurrentIndex={setCurrentIndex}
+                    // setIsPromotingNext={setIsPromotingNext}
                     nextUpAnime={nextUpAnime}
                     refreshKey={refreshKey}
                     session={session}
                     hasMoreAnime={hasMoreAnime}
-                    deckAnimes={deckAnimes}
+                    // deckAnimes={deckAnimes}
                   />
                 }
               />

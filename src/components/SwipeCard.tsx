@@ -31,7 +31,7 @@ export default function SwipeCard({
       dragConstraints={{ left: 0, right: 0 }}
       dragElastic={0.5}
       whileDrag={{ rotate: 0 }}
-      onDragEnd={(e, info) => {
+      onDragEnd={(_, info) => {
         if (info.offset.x > 100) {
           controls.start({
             x: "30vw",
