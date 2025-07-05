@@ -158,11 +158,15 @@ function App() {
       {session && <Navbar user={session.user} />}
       <main className="flex-1">
         <Routes>
-          {/* Public routes */}
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/register" element={<RegisterPage />} />
+          <Route
+            path="/login"
+            element={session ? <Navigate to="/" replace /> : <LoginPage />}
+          />
+          <Route
+            path="/register"
+            element={session ? <Navigate to="/" replace /> : <RegisterPage />}
+          />
 
-          {/* Protected routes */}
           {session ? (
             <>
               <Route
@@ -185,7 +189,10 @@ function App() {
                   />
                 }
               />
-              <Route path="/recommendation" element={<Recommendation userId={session.user.id} />} />
+              <Route
+                path="/recommendation"
+                element={<Recommendation userId={session.user.id} />}
+              />
               <Route path="/anime/:id" element={<AnimeDetail />} />
             </>
           ) : (

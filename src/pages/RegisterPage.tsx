@@ -24,7 +24,7 @@ export default function RegisterPage() {
     if (error) {
       setError(error.message);
     } else {
-      navigate("/"); // ✅ Redirect on successful registration
+      navigate("/"); 
     }
   };
 

@@ -15,10 +15,11 @@ interface HomeProps {
   onLike: () => void;
   onDislike: () => void;
   isPromotingNext: boolean;
-  setCurrentIndex: React.Dispatch<React.SetStateAction<number>>;
-  setIsPromotingNext: React.Dispatch<React.SetStateAction<boolean>>;
+  // setCurrentIndex: React.Dispatch<React.SetStateAction<number>>;
+  // setIsPromotingNext: React.Dispatch<React.SetStateAction<boolean>>;
   nextUpAnime?: Anime | null;
   refreshKey: number;
+  hasMoreAnime: boolean;
   session: any; // replace with Supabase Session type if you want stricter typing
 }
 
