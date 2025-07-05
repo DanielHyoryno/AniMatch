@@ -18,7 +18,7 @@ export default function Navbar({ user }: { user: any }) {
   return (
     <>
     <motion.nav
-        className="fixed top-0 w-full bg-black border-b-2 border-neon-blue flex items-center justify-between relative md:p-4 z-50 mb-10"
+        className="fixed top-0 w-full bg-black border-b-2 border-neon-blue flex items-center justify-between md:p-4 z-50 mb-10"
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ type: "spring", stiffness: 100, damping: 20 }}

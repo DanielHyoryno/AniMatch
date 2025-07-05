@@ -145,10 +145,10 @@ function App() {
   const handleLike = () => handleSwipe("right");
   const handleDislike = () => handleSwipe("left");
 
-  const deckAnimes = [
-    animeList[currentIndex + 1],
-    animeList[currentIndex],
-  ].filter(Boolean);
+  // const deckAnimes = [
+  //   animeList[currentIndex + 1],
+  //   animeList[currentIndex],
+  // ].filter(Boolean);
 
   const hasMoreAnime = currentIndex < animeList.length;
   const nextUpAnime = animeList[currentIndex + 1];
