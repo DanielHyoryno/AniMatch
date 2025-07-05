@@ -137,9 +137,9 @@ export default function Recommendation({ userId }: { userId: string }) {
     );
 
   return (
-    <div className="max-w-4xl mx-auto p-4 bg-black min-h-screen text-cyan-400">
+    <div className="max-w-4xl mx-auto p-4 bg-black min-h-screen text-cyan-400 mt-24">
       <h1 className="text-3xl font-bold mb-6 text-center drop-shadow-neon">Recommended For You</h1>
-      <div className="grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-3 lg:grid-cols-4">
+      <div className="ml-8 mr-8 grid grid-cols-3 gap-7 sm:gap-6 md:grid-cols-3 lg:grid-cols-4">
         {recommendations.map((anime) => (
           <Link key={anime.mal_id} to={`/anime/${anime.mal_id}`}>
             <div className="bg-gray-900 rounded shadow hover:scale-105 transition w-full max-w-[150px] sm:max-w-none mx-auto">

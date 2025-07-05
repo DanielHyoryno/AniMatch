@@ -44,7 +44,7 @@ export default function Home({
   const hasMoreAnime = currentIndex < animeList.length;
 
   return (
-    <div className="relative overflow-hidden min-h-screen flex justify-center items-center bg-black mb-100">
+    <div className="relative flex flex-col items-center justify-center w-full h-full pt-20">
       {animeList.length === 0 && (
         <h2 className="text-2xl text-neon-blue text-center p-4 animate-pulse">
           Loading anime list...

@@ -154,9 +154,9 @@ function App() {
   const nextUpAnime = animeList[currentIndex + 1];
 
   return (
-    <div className="min-h-screen flex flex-col relative bg-black px-4 sm:px-0">
+    <div className="overflow-hidden min-h-screen flex flex-col relative bg-black sm:px-0">
       {session && <Navbar user={session.user} />}
-      <main className="flex-1">
+      <main className="flex-1 main-content">
         <Routes>
           <Route
             path="/login"

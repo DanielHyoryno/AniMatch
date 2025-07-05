@@ -18,13 +18,17 @@ export default function Navbar({ user }: { user: any }) {
   return (
     <>
     <motion.nav
-        className="fixed top-0 w-full bg-black border-b-2 border-neon-blue flex items-center justify-between md:p-4 z-50 mb-10"
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ type: "spring", stiffness: 100, damping: 20 }}
-      >
+      className="fixed top-0 w-full bg-black border-b-2 border-neon-blue z-50 "
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ type: "spring", stiffness: 100, damping: 20 }}
+    >
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-6 py-3 md:py-4">
         {/* Logo */}
-        <div className="flex items-center space-x-2 cursor-pointer z-10" onClick={() => navigate("/")}>
+        <div
+          className="flex items-center space-x-2 cursor-pointer"
+          onClick={() => navigate("/")}
+        >
           <img
             src={logo}
             alt="Logo"
@@ -32,8 +36,8 @@ export default function Navbar({ user }: { user: any }) {
           />
         </div>
 
-        {/* Center Nav - absolutely centered */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 hidden md:flex space-x-8">
+        {/* Center Nav */}
+        <div className="hidden md:flex space-x-8">
           <button
             className="text-neon-blue font-semibold relative group"
             onClick={() => navigate("/")}
@@ -41,7 +45,6 @@ export default function Navbar({ user }: { user: any }) {
             <span className="relative z-10">Home</span>
             <span className="absolute inset-x-0 bottom-0 h-0.5 bg-neon-blue transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
           </button>
-
           <button
             className="text-neon-blue font-semibold relative group"
             onClick={() => navigate("/recommendation")}
@@ -51,9 +54,9 @@ export default function Navbar({ user }: { user: any }) {
           </button>
         </div>
 
-        {/* Right Side: Welcome & Logout */}
-        <div className="flex items-center space-x-3 z-10">
-          <p className="hidden sm:block text-neon-blue text-sm md:text-base drop-shadow-neon-blue-glow truncate max-w-[120px] md:max-w-none mr-5">
+        {/* Right Side */}
+        <div className="flex items-center space-x-3">
+          <p className="hidden sm:block text-neon-blue text-sm md:text-base drop-shadow-neon-blue-glow truncate max-w-[120px] md:max-w-none mr-2">
             Welcome, {user?.email?.split("@")[0] || "User"}!
           </p>
 
@@ -64,7 +67,6 @@ export default function Navbar({ user }: { user: any }) {
             Logout
           </button>
 
-          {/* Hamburger */}
           <div className="md:hidden z-50" onClick={toggleMenu}>
             <div className="space-y-1 cursor-pointer">
               <div className="w-6 h-1 bg-neon-blue"></div>
@@ -73,7 +75,9 @@ export default function Navbar({ user }: { user: any }) {
             </div>
           </div>
         </div>
-      </motion.nav>
+      </div>
+    </motion.nav>
+
 
 
       {/* Mobile Side Menu */}
